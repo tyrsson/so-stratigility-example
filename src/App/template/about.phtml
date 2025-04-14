@@ -1,0 +1,24 @@
+<?php
+declare(strict_types=1);
+
+return function($data) {
+    echo <<<HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{$data['title']}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>{$data['title']}</h1>
+        <p>{$data['message']}</p>
+        <a href="/" class="btn btn-primary">Home</a>
+    </div>
+</body>
+</html>
+HTML;
+};
+?>
